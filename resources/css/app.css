@@ -1,0 +1,112 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: underline;
+}
+
+body {
+    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-content {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+  }
+
+
+.btn {
+    width: 33%;
+    padding: 30px 30px;
+}
+
+
+/* home page */
+
+.home-header {
+    background-color: #3b82f6;
+    color: #faf9ff;
+}
+
+.header-top .profile-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-top h5 {
+    font-size: 14px;
+}
+
+.header-bottom .card {
+    width: 48%;
+    border-radius: 10px;
+    background: #5c96f9;
+    padding: 13px 23px;
+    color: white;
+}
+
+.home-main h4 {
+    color: #2f343a;
+}
+
+.home-main .advice-box {
+    background-color: #f0f4ff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.home-main .advice-box p {
+    color: #898f9b;
+    font-size: 16px;
+}
+
+.home-main .lesson-card {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.home-main .lesson-card p {
+    color: #898f9b;
+}
+
+.home-main .lesson-card h5 {
+    color: #2f343a;
+    font-size: 20px;
+}
+
+.home-main .lesson-card p {
+    font-size: 17px;
+}
+
+.home-main .lesson-bottom a {
+    font-size: 18px;
+}
+
+/* students page */
+
+.students-header p {
+    color: #898f9b;
+}
+
+.info-card {
+    width: 30%;
+    border-radius: 12px;
+}
+
+.info-card p {
+    color: #898f9b;
+}
+
+.info-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
