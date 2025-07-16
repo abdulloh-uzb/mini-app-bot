@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Log;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
 class TelegramService
@@ -50,7 +51,7 @@ class TelegramService
         $tgId = $message->getFrom()->getId();
 
         $loginSuccess = $this->authService->login($phone, $tgId);
-
+        Log::info('Login attempt', ['phone' => $phone, 'tg_id' => $tgId, 'success' => $loginSuccess]);
         if ($loginSuccess === true) {
             Telegram::sendMessage([
                 'chat_id' => $message->getChat()->getId(),

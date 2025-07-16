@@ -18,7 +18,7 @@
            <?php $currentUrl = request()->segment(1);?>
            <a href="{{route('teachers.home')}}" class="btn d-flex flex-column {{$currentUrl == 'home' ? 'bg-primary text-white' : ''}}"><i class="fa-solid fa-house"></i> <span>Asosiy</span></a>
            <a href="{{route('groups.index')}}" class="btn d-flex flex-column {{$currentUrl == 'groups' ? 'bg-primary text-white' : ''}}"><i class="fa-solid fa-user-group"></i> <span>Guruhlar</span></a>
-           <a href="{{route('students.index')}}" class="btn d-flex flex-column {{$currentUrl == 'students' ? 'bg-primary text-white' : ''}}" ><i class="fa-solid fa-gear"></i> <span>Sozlamalar</span></a>
+           <a href="{{route('teachers.settings')}}" class="btn d-flex flex-column {{$currentUrl == 'students' ? 'bg-primary text-white' : ''}}" ><i class="fa-solid fa-gear"></i> <span>Sozlamalar</span></a>
         </footer>
     </div>
 

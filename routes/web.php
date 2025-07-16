@@ -20,6 +20,8 @@ Route::middleware(['auth', 'role:teacher'])->group(function () {
 
     Route::get("students", [StudentController::class, 'index'])->name('students.index');
 
+    Route::get("teacher/settings", [TeacherController::class, 'settings'])->name('teachers.settings');
+
 });
 
 Route::post('telegram/webhook', [TelegramController::class, "handle"]);

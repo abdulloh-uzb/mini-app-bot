@@ -26,6 +26,7 @@ class SessionController extends Controller
             "student_id" => "required|exists:users,id",
             "status" => "required|in:present,absent,late"
         ]);
+        
         $this->sessionService->setAttendance($validated['session_id'], $validated['student_id'], $validated['status']);
 
         return redirect()->back();
