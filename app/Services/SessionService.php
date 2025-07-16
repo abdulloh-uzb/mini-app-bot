@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Attendance;
 use App\Models\Session;
+use Carbon\Carbon;
 
 class SessionService
 {
@@ -62,4 +63,28 @@ class SessionService
         }
         return $attendances;
     }
+
+    public function getSession($date)
+    {
+        $todayGroups = Session::where("date", $date)->with("group")->get();
+
+        $groupsAttendanceCompleted = 0;
+        $groupsAttendanceNotCompleted = 0;
+
+        $todayGroups = $todayGroups->transform(function ($item) use (&$groupsAttendanceCompleted, &$groupsAttendanceNotCompleted) {
+            $result = $this->checkAttendance($item->id);
+            $item->is_attendance_completed = $result;
+
+            if ($result) {
+                $groupsAttendanceCompleted++;
+            } else {
+                $groupsAttendanceNotCompleted++;
+            }
+
+            return $item;
+        });
+
+        return [$todayGroups, $groupsAttendanceCompleted, $groupsAttendanceNotCompleted];
+    }
+
 }

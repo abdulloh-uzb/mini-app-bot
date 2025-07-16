@@ -23,7 +23,6 @@ class AuthService
         $user->update([
             "tg_id" => $tgId
         ]);
-    
 
         return true;
         

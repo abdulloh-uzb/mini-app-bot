@@ -64,7 +64,7 @@
                             <i class="fa-solid fa-users"></i>
                             {{$studentsCount}} o'quvchi
                         </p>
-                        <a href="" class="text-muted">
+                        <a href="{{route('groups.show', $group->id)}}" class="text-muted">
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
